@@ -1,0 +1,35 @@
+Title : Impact of Outside Noise of Speech Volume
+
+Contributions: Report Writing, Data Collection, Analysis, Model Training and Validation, Graph Plotting (sample contributions)
+
+Member 1 Hallie Liu: Data Collection, Model Training and Validation, Report Writing
+Member 2 Jason Chen: Data Collection, Analysis, Spectrogram
+Member 3 Sandy Son: Data Collection, Graph Plotting, Analysis
+Member 4 Sehwa Hong: Data Collection, Graph Plotting, Analysis
+
+
+Problem Statement
+The objective of this project was to develop a sound detection application capable of monitoring frequencies and sensor data of audio. Our primary goal was to collect and analyze data to discern potential audio variations during speech in various headphone usage scenarios and when not using headphones. We believed that knowing this data could provide valuable information in further developing an application that could detect when the speaker’s volume increases drastically from their normal volume.
+
+Potential Applications of the Project [UNCHANGED FROM PROPOSAL]
+The developed sound sensor application has various potential applications. In public transport settings, it can alert users if their voice exceeds safe levels while wearing headphones, promoting awareness and preventing potential safety hazards. Additionally, in corporate settings, implementing the technology in meeting rooms will optimize audio levels based on the number of people present and their vocal volumes, ensuring effective communication. This application could assist users in calibrating noise-canceling headphones for optimal performance by analyzing ambient noise and adjusting the headphones accordingly. Finally, elderly could utilize the application to detect and control their volume levels while using headphones. 
+
+
+Data Collection, Model Training, Graphing, and Testing/Analysis
+Data Collection: Gather a diverse dataset of 3 different speakers in 3 different scenarios at the same location (Science and Engineering Library). The 3 scenarios accounted for were 1. Not wearing headphones at all, 2. Wearing headphones with no volume, 3. Wearing headphones with elevated audio. There was slight variance in ambient noise as some recordings had increased background noise due to external factors (other students studying and chatting).
+Model Training: Took the audio files and turned them into .wav files, which we then extracted features from using Librosa (with a particular emphasis on dB). During the model training and testing phase, we encountered a surprising 100% accuracy, prompting us to recognize the potential limitation of our model due to the relatively small sample size. This realization prompted a reevaluation of the dataset's adequacy to ensure a more robust and reliable model performance.
+Graphing: Extracted certain features from the original .wav files (dBFS) and applied it to different histograms, graphs, and a spectrogram to find the average volume of each scenario and also the extreme data points. 
+Test/Analysis: After looking at all the data, of the diagrams and also of our classifier, we found that although we were successful in proving our original hypothesis, we were unsuccessful in training the classifier due to lack of sample count. 
+
+Results
+Graphs/Tables, Comparison charts to show the differences between each situation, and a classifier
+
+Learnings from the Project
+In this project, we learned about the impact that headphones have on speech volume. A personal lesson is to be cognizant of my own volume when speaking when I have something impacting my auditory experience. We also learned how to properly utilize Librosa so that we can analyze different features in speech. Lastly, we learned the important lesson of gathering not just a variety of data, but also increasing the sample count (when we attempted to fix this issue by introducing a rolling window, the problem still persisted).
+
+How to Improve the Project Further:
+We would want to incorporate more scenarios in the future (speaking in different languages, areas, much more different ambient noises). We would also want to investigate the impact that having another speaker in the room or close to the original speaker would have on data and the classifier. And most importantly, we would like to drastically increase the sample counts given for training and testing.
+
+References [UNCHANGED FROM PROPOSAL]:
+Real-time Target Sound Extraction
+https://ieeexplore.ieee.org/abstract/document/10094573?casa_token=A2ALJO73Yp0AAAAA:07fIgtLNymq3MyBqfzsKlDicWzctFHz7caTK9RpfiubMkQOkhbOOu4Gzxp-Nyte6maT1CKpVIQ
